@@ -24,7 +24,7 @@ test('client.add: http url to a torrent file, string', function (t) {
   t.plan(8)
 
   const server = http.createServer(function (req, res) {
-    t.ok(req.headers['user-agent'].indexOf('WebTorrent') !== -1)
+    t.ok(req.headers['user-agent'].indexOf('Transmission') !== -1)
     res.end(fixtures.leaves.torrent)
   })
 
