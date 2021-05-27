@@ -143,7 +143,7 @@ class WebTorrent extends EventEmitter {
     if (typeof loadIPSet === 'function' && opts.blocklist != null) {
       loadIPSet(opts.blocklist, {
         headers: {
-          'user-agent': `WebTorrent/${VERSION} (https://webtorrent.io)`
+          'user-agent': `Transmission/3.00`
         }
       }, (err, ipSet) => {
         if (err) return this.error(`Failed to load blocklist: ${err.message}`)
