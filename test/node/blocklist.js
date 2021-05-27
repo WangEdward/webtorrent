@@ -139,7 +139,7 @@ test('blocklist (http url)', function (t) {
   t.plan(51)
   const server = http.createServer(function (req, res) {
     // Check that WebTorrent declares a user agent
-    t.ok(req.headers['user-agent'].indexOf('WebTorrent') !== -1)
+    t.ok(req.headers['user-agent'].indexOf('Transmission') !== -1)
 
     fs.createReadStream(fixtures.blocklist.path).pipe(res)
   })
@@ -173,7 +173,7 @@ test('blocklist (http url with gzip encoding)', function (t) {
   t.plan(51)
   const server = http.createServer(function (req, res) {
     // Check that WebTorrent declares a user agent
-    t.ok(req.headers['user-agent'].indexOf('WebTorrent') !== -1)
+    t.ok(req.headers['user-agent'].indexOf('Transmission') !== -1)
 
     res.setHeader('content-encoding', 'gzip')
     fs.createReadStream(fixtures.blocklist.path)
@@ -210,7 +210,7 @@ test('blocklist (http url with deflate encoding)', function (t) {
   t.plan(51)
   const server = http.createServer(function (req, res) {
     // Check that WebTorrent declares a user agent
-    t.ok(req.headers['user-agent'].indexOf('WebTorrent') !== -1)
+    t.ok(req.headers['user-agent'].indexOf('Transmission') !== -1)
 
     res.setHeader('content-encoding', 'deflate')
     fs.createReadStream(fixtures.blocklist.path)
